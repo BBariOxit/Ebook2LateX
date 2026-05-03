@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:15
+    container_name: ebook_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: p@ssword1
+      POSTGRES_DB: ebook2latex_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

@@ -22,3 +22,23 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Python rác
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+ENV/
+env/
+.env
+
+# SQLAlchemy/Alembic rác
+*.db
+*.sqlite
+
+# Backend uploads (đừng push mấy file PDF rác của mày lên repo)
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Docker rác
+.docker-compose.override.yml
