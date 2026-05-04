@@ -11,14 +11,24 @@ def seed_data():
 
         # 2. Tạo dữ liệu cho bảng User
         # Lưu ý: Trong thực tế mật khẩu cần được băm (hash), ở đây ta nhập mật khẩu tượng trưng
+        # test_user = User(
+        #     user_id=uuid.uuid4(),
+        #     username_email="teo@dalat.edu.vn",
+        #     password_hash="hashed_password_here",
+        #     full_name="Lê Văn Tèo",
+        #     role="Admin"
+        # )
+        # db.add(test_user)
+
         test_user = User(
             user_id=uuid.uuid4(),
-            username_email="teo@dalat.edu.vn",
-            password_hash="hashed_password_here",
-            full_name="Lê Văn Tèo",
+            username_email="phanbao2648@gmail.com",
+            password_hash="admin_password_123",
+            full_name="Phan Thái Bảo",
             role="Admin"
         )
         db.add(test_user)
+
         db.flush() # Đẩy dữ liệu tạm thời để lấy user_id cho bảng sau
 
         # 3. Tạo dữ liệu mẫu cho bảng Documents
