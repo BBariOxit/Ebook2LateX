@@ -32,15 +32,15 @@ def seed_data():
         db.flush() # Đẩy dữ liệu tạm thời để lấy user_id cho bảng sau
 
         # 3. Tạo dữ liệu mẫu cho bảng Documents
-        test_doc = Document(
-            id=uuid.uuid4(),
-            user_id=test_user.user_id,
-            file_name="Giao_trinh_Toan_12.pdf",
-            file_path_url="/uploads/toan12.pdf",
-            status="Completed"
-        )
-        db.add(test_doc)
-        db.flush()
+        # test_doc = Document(
+        #     id=uuid.uuid4(),
+        #     user_id=test_user.user_id,
+        #     file_name="Giao_trinh_Toan_12.pdf",
+        #     file_path_url="/uploads/toan12.pdf",
+        #     status="Completed"
+        # )
+        # db.add(test_doc)
+        # db.flush()
 
         # 4. Tạo dữ liệu mẫu cho bảng FormulaEntries (Công thức LaTeX)
         formula = FormulaEntry(

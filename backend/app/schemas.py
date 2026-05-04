@@ -17,3 +17,13 @@ class UserResponse(BaseModel):
     # Bật chế độ tự động map với SQLAlchemy ORM
     class Config:
         from_attributes = True
+
+class DocumentResponse(BaseModel):
+    id: UUID
+    file_name: str
+    file_path_url: str
+    status: str
+    created_at: Optional[datetime] = None
+
+    class Config:
+        from_attributes = True
